@@ -39,7 +39,8 @@ const TodoList = () => {
           <div className="flex space-x-2">
             <button
               onClick={() => checkHandler(task.id)}
-              className={`bg-${task.completed ? "blue" : "green"}-400 text-white px-4 py-2 rounded font-bold`}
+              //className={`bg-${task.completed ? "blue" : "green"}-400 text-white px-4 py-2 rounded font-bold`}
+              className={`bg-blue-400 text-black px-4 py-2 rounded font-bold`}
             >
               {task.completed ? 'Undo' : 'Check Done'}
             </button>
