@@ -39,6 +39,8 @@ const TodoList = () => {
           <div className="flex space-x-2">
             <button
               onClick={() => checkHandler(task.id)}
+              // className={`bg-green-400 text-white px-4 py-2 rounded font-bold`}
+              // className={`bg-${task.completed ? 'blue' : 'green'}-400 text-white px-4 py-2 rounded font-bold`}
               className={`bg-blue-400 text-white px-4 py-2 rounded font-bold`}
             >
               {task.completed ? 'Undo' : 'Check Done'}
@@ -56,7 +58,7 @@ const TodoList = () => {
 
   return (
     <>
-      <h1 className="bg-black text-white p-5 text-2xl font-bold text-center">
+      <h1 className="bg-red-400 text-white p-5 text-2xl font-bold text-center">
         Task Keeper
       </h1>
       {error && <p className="text-red-500 text-center">{error}</p>}
@@ -75,7 +77,7 @@ const TodoList = () => {
           value={desc}
           onChange={(e) => setDesc(e.target.value)}
         />
-        <button className="bg-black text-white px-4 py-3 text-2xl font-bold rounded">
+        <button className="bg-red-400 text-white px-4 py-3 text-2xl font-bold rounded">
           Add Task
         </button>
       </form>
